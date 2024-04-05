@@ -2,14 +2,8 @@
 
 Using [Castle Game Engine](https://castle-engine.io/).
 
-## Building
+The files "gameenemy.pas", "gameinitialize.pas", "gameviewplay.pas", should go into a folder called "code" in the main directory, as that is the code of the game so far.
 
-Compile by:
+The files "CastleSettings.xml", "gameviewmain.castle-user-interface", and "README.txt" go in the "data" folder.
 
-- [CGE editor](https://castle-engine.io/editor). Just use menu items _"Compile"_ or _"Compile And Run"_.
-
-- Or use [CGE command-line build tool](https://castle-engine.io/build_tool). Run `castle-engine compile` in this directory.
-
-- Or use [Lazarus](https://www.lazarus-ide.org/). Open in Lazarus `toy_story_2_like_game_standalone.lpi` file and compile / run from Lazarus. Make sure to first register [CGE Lazarus packages](https://castle-engine.io/lazarus).
-
-- Or use [Delphi](https://www.embarcadero.com/products/Delphi). Open in Delphi `toy_story_2_like_game_standalone.dproj` file and compile / run from Delphi. See [CGE and Delphi](https://castle-engine.io/delphi) documentation for details.
+The rest of the files will go in the main directory, and not any sub-folders, unlike the other files.
