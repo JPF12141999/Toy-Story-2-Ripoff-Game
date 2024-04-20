@@ -23,7 +23,6 @@
           {
             "$$ClassName" : "TCastleSound",
             "Name" : "BackgroundMusic",
-            "Stream" : true,
             "Url" : "file:///C:/Users/Joshua/Pictures/toystorymusic/Tomfoolery.ogg"
           }
         ],
@@ -45,7 +44,7 @@
                 "RenderOptions" : {
                   "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                 },
-                "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-SandyDome.glb",
+                "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-SandyDome.glb",
                 "$Children" : [
                   {
                     "$$ClassName" : "TCastleTransform",
@@ -107,7 +106,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -141,7 +140,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -175,7 +174,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -209,7 +208,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -243,7 +242,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -277,7 +276,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -311,7 +310,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -345,7 +344,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -379,7 +378,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -413,7 +412,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -447,7 +446,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -481,7 +480,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -515,7 +514,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -549,7 +548,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -583,7 +582,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -617,7 +616,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -651,7 +650,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -685,7 +684,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -719,7 +718,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -753,7 +752,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -787,7 +786,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -821,7 +820,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -855,7 +854,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -889,7 +888,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -923,7 +922,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -957,7 +956,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -991,7 +990,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1025,7 +1024,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1059,7 +1058,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1093,7 +1092,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1127,7 +1126,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1161,7 +1160,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1195,7 +1194,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1229,7 +1228,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1263,7 +1262,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1297,7 +1296,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1331,7 +1330,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1365,7 +1364,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1399,7 +1398,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1433,7 +1432,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1467,7 +1466,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1501,7 +1500,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1535,7 +1534,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1569,7 +1568,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1603,7 +1602,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1637,7 +1636,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1671,7 +1670,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1705,7 +1704,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1739,7 +1738,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1773,7 +1772,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1807,7 +1806,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1841,7 +1840,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1875,7 +1874,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1909,7 +1908,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1943,7 +1942,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -1977,7 +1976,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2011,7 +2010,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2045,7 +2044,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-coin.glb",
+                            "Url" : "castle-data:/generalgame-assets/coin.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2091,7 +2090,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-helmet.glb",
+                            "Url" : "castle-data:/generalgame-assets/extralifehelmet.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2131,7 +2130,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-helmet.glb",
+                            "Url" : "castle-data:/generalgame-assets/extralifehelmet.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2171,7 +2170,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-hintbox.glb",
+                            "Url" : "castle-data:/generalgame-assets/hintbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2211,7 +2210,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-hintbox.glb",
+                            "Url" : "castle-data:/generalgame-assets/hintbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2251,7 +2250,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-hintbox.glb",
+                            "Url" : "castle-data:/generalgame-assets/hintbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2291,7 +2290,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-hintbox.glb",
+                            "Url" : "castle-data:/generalgame-assets/hintbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2331,7 +2330,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-hintbox.glb",
+                            "Url" : "castle-data:/generalgame-assets/hintbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2370,7 +2369,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-waterpuddle.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-waterpuddle.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2410,7 +2409,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-oilspill.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-oilspill.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2444,7 +2443,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-sludgespill.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-sludgespill.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2496,7 +2495,7 @@
                               "W" : 4.7123889923095703E+000,
                               "Y" : 1.0000000000000000E+000
                             },
-                            "Url" : "file:///C:/Users/Joshua/Desktop/Squidward.glb",
+                            "Url" : "castle-data:/generalgame-assets/Squidward.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2536,7 +2535,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-sawblade.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-sawblade.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2571,7 +2570,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-sawblade.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-sawblade.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2614,7 +2613,7 @@
                               "$$ClassName" : "TCastleVector3Persistent",
                               "Y" : 2.0000000000000000E+000
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshoptube.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshoptube.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2652,7 +2651,7 @@
                               "$$ClassName" : "TCastleVector3Persistent",
                               "Y" : 2.0000000000000000E+000
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshoptube.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshoptube.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2696,7 +2695,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshopbroom.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshopbroom.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2738,7 +2737,7 @@
                               "$$ClassName" : "TCastleVector3Persistent",
                               "Z" : -5.0000000000000000E+000
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshopbroom.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshopbroom.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2912,7 +2911,7 @@
                           "$$ClassName" : "TCastleVector4RotationPersistent",
                           "W" : 1.5707963705062866E+000
                         },
-                        "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-submarine.glb",
+                        "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-submarine.glb",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleMeshCollider",
@@ -2950,7 +2949,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-squidwardnote.glb",
+                            "Url" : "castle-data:/generalgame-assets/squidwardnote.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -2984,7 +2983,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-squidwardnote.glb",
+                            "Url" : "castle-data:/generalgame-assets/squidwardnote.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3018,7 +3017,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-squidwardnote.glb",
+                            "Url" : "castle-data:/generalgame-assets/squidwardnote.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3052,7 +3051,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-squidwardnote.glb",
+                            "Url" : "castle-data:/generalgame-assets/squidwardnote.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3086,7 +3085,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-squidwardnote.glb",
+                            "Url" : "castle-data:/generalgame-assets/squidwardnote.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3128,7 +3127,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshopscrewdriver.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshopscrewdriver.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3164,7 +3163,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshopscrewdriver.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshopscrewdriver.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3200,7 +3199,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshopscrewdriver.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshopscrewdriver.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3240,7 +3239,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-patty.glb",
+                            "Url" : "castle-data:/generalgame-assets/patty.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3274,7 +3273,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-patty.glb",
+                            "Url" : "castle-data:/generalgame-assets/patty.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3308,7 +3307,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-patty.glb",
+                            "Url" : "castle-data:/generalgame-assets/patty.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3342,7 +3341,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-patty.glb",
+                            "Url" : "castle-data:/generalgame-assets/patty.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3386,7 +3385,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshoplampchain.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshoplampchain.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3424,7 +3423,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/JoshuaPFingerle-workshoplampchain.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/JoshuaPFingerle-workshoplampchain.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3470,7 +3469,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-workshopmonkeybar.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-workshopmonkeybar.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3510,7 +3509,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-workshopmonkeybar.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-workshopmonkeybar.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3555,7 +3554,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-workshopmonkeybar.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-workshopmonkeybar.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3600,7 +3599,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-workshopmonkeybar.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-workshopmonkeybar.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3651,7 +3650,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-MrsPuff.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-MrsPuff.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3698,7 +3697,7 @@
                         "RenderOptions" : {
                           "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                         },
-                        "Url" : "file:///C:/Users/Joshua/Downloads/sandyparts/lower.md3"
+                        "Url" : "castle-data:/generalgame-assets/sandyparts/lower.md3"
                       },
                       {
                         "$$ClassName" : "TCastleScene",
@@ -3712,7 +3711,7 @@
                           "$$ClassName" : "TCastleVector3Persistent",
                           "Z" : 1.0000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Downloads/sandyparts/upper.md3"
+                        "Url" : "castle-data:/generalgame-assets/sandyparts/upper.md3"
                       },
                       {
                         "$$ClassName" : "TCastleScene",
@@ -3726,7 +3725,7 @@
                           "$$ClassName" : "TCastleVector3Persistent",
                           "Z" : 1.6000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Downloads/sandyparts/head.md3"
+                        "Url" : "castle-data:/generalgame-assets/sandyparts/head.md3"
                       }
                     ],
                     "$Behaviors" : [
@@ -3773,7 +3772,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-Patrick.glb",
+                            "Url" : "castle-data:/generalgame-assets/Patrick.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3819,7 +3818,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-PowerPak.glb",
+                            "Url" : "castle-data:/generalgame-assets/PowerPak.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3865,7 +3864,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-CosmicShield.glb",
+                            "Url" : "castle-data:/generalgame-assets/CosmicShield.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -3897,8 +3896,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -3912,7 +3911,7 @@
                           "Y" : 1.2500000000000000E+000,
                           "Z" : -4.7000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -3939,8 +3938,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -3954,7 +3953,7 @@
                           "Y" : 1.2500000000000000E+000,
                           "Z" : -4.3000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -3982,8 +3981,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -3997,7 +3996,7 @@
                           "Y" : 1.2500000000000000E+000,
                           "Z" : -4.1000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4025,8 +4024,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4040,7 +4039,7 @@
                           "Y" : 1.7999999523162842E+000,
                           "Z" : -4.4000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4068,8 +4067,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4083,7 +4082,7 @@
                           "Y" : 1.7999999523162842E+000,
                           "Z" : -4.5000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4111,8 +4110,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4126,7 +4125,7 @@
                           "Y" : 1.7999999523162842E+000,
                           "Z" : -4.1500000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4154,8 +4153,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4169,7 +4168,7 @@
                           "Y" : 1.7999999523162842E+000,
                           "Z" : -4.5000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4197,8 +4196,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4212,7 +4211,7 @@
                           "Y" : 8.0750000000000000E+001,
                           "Z" : -2.2500000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4240,8 +4239,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4255,7 +4254,7 @@
                           "Y" : 8.0750000000000000E+001,
                           "Z" : -2.7000000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4283,8 +4282,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4298,7 +4297,7 @@
                           "Y" : 8.0550003051757812E+001,
                           "Z" : -3.5500000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4326,8 +4325,8 @@
                         },
                         "RotationPersistent" : {
                           "$$ClassName" : "TCastleVector4RotationPersistent",
-                          "W" : 1.2764403820037842E+000,
-                          "Y" : 1.0000000000000000E+000
+                          "W" : 3.1007400155067444E-001,
+                          "Y" : -1.0000001192092896E+000
                         },
                         "ScalePersistent" : {
                           "$$ClassName" : "TCastleVector3Persistent",
@@ -4341,7 +4340,7 @@
                           "Y" : 8.0750000000000000E+001,
                           "Z" : -3.1500000000000000E+001
                         },
-                        "Url" : "file:///C:/Users/Joshua/Pictures/toystoryimages/nail.png",
+                        "Url" : "castle-data:/toystoryimages/nail.png",
                         "$Behaviors" : [
                           {
                             "$$ClassName" : "TCastleBillboard",
@@ -4387,7 +4386,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-basementlight.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-basementlight.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4425,7 +4424,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-basementlight.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-basementlight.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4469,7 +4468,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4506,7 +4505,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4545,7 +4544,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4584,7 +4583,7 @@
                               "Y" : 1.6700000762939453E+001,
                               "Z" : -4.8000000000000000E+001
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-TokenPiece.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-TokenPiece.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4634,7 +4633,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-Bed.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-Bed.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4686,7 +4685,7 @@
                               "Y" : 2.3549999237060547E+001,
                               "Z" : -3.1000000000000000E+001
                             },
-                            "Url" : "file:///C:/Users/Joshua/Desktop/MrKrabs.glb",
+                            "Url" : "castle-data:/generalgame-assets/MrKrabs.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4726,7 +4725,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-gary.glb",
+                            "Url" : "castle-data:/generalgame-assets/gary.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4772,7 +4771,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-SpongeBob.glb",
+                            "Url" : "castle-data:/generalgame-assets/SpongeBob.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4828,7 +4827,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-boxwithflaps.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-boxwithflaps.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4867,7 +4866,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-boxwithflaps.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4907,7 +4906,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4947,7 +4946,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -4987,7 +4986,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5027,7 +5026,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5067,7 +5066,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5107,7 +5106,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-pushbox.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5147,7 +5146,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-boxwithflaps.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5187,7 +5186,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-boxwithflaps.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5232,7 +5231,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-boxwithflaps.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-pushbox.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5285,7 +5284,7 @@
                               "$$ClassName" : "TCastleVector3Persistent",
                               "Y" : 5.0000000000000000E+000
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-AtticPlank.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-AtticPlank.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5325,7 +5324,7 @@
                             "RenderOptions" : {
                               "$$ClassName" : "TCastleScene.TSceneRenderOptions"
                             },
-                            "Url" : "file:///C:/Users/Joshua/Downloads/SandyTreedome-AtticPole.glb",
+                            "Url" : "castle-data:/sandystreedome-assets/SandyTreedome-AtticPole.glb",
                             "$Behaviors" : [
                               {
                                 "$$ClassName" : "TCastleMeshCollider",
@@ -5351,6 +5350,12 @@
                     },
                     "Perspective" : {
                       "$$ClassName" : "TCastlePerspective"
+                    },
+                    "TranslationPersistent" : {
+                      "$$ClassName" : "TCastleVector3Persistent",
+                      "X" : 5.5000000000000000E+001,
+                      "Y" : 5.0000000000000000E+000,
+                      "Z" : 5.0000000000000000E+001
                     }
                   }
                 ],
@@ -5389,7 +5394,7 @@
                       "X" : 4.5000000000000000E+001,
                       "Z" : 4.0000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5421,7 +5426,7 @@
                       "X" : -1.0000000000000000E+001,
                       "Z" : -1.5000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5453,7 +5458,7 @@
                       "X" : -2.0000000000000000E+000,
                       "Z" : -1.1000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5486,7 +5491,7 @@
                       "Y" : 2.9000000000000000E+001,
                       "Z" : -4.2500000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5519,7 +5524,7 @@
                       "Y" : 4.1000000000000000E+001,
                       "Z" : -2.4000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5552,7 +5557,7 @@
                       "Y" : 6.1999998092651367E+000,
                       "Z" : -2.7000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5584,7 +5589,7 @@
                       "X" : 1.2000000000000000E+001,
                       "Z" : -1.0000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5616,7 +5621,7 @@
                       "X" : 1.7000000000000000E+001,
                       "Z" : -1.7000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5648,7 +5653,7 @@
                       "X" : 1.7000000000000000E+001,
                       "Z" : -3.0000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5680,7 +5685,7 @@
                       "X" : 1.7000000000000000E+001,
                       "Z" : -4.2000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5712,7 +5717,7 @@
                       "X" : 9.0000000000000000E+000,
                       "Z" : -3.0000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5745,7 +5750,7 @@
                       "Y" : 1.2000000000000000E+001,
                       "Z" : -3.3000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5778,7 +5783,7 @@
                       "Y" : 1.2000000000000000E+001,
                       "Z" : -4.2000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Downloads/Puffer%20Fish/cannon_puffer.obj",
+                    "Url" : "castle-data:/generalgame-assets/Puffer%20Fish/cannon_puffer.obj",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5805,7 +5810,7 @@
                       "Y" : 5.0000000000000000E+000,
                       "Z" : 5.5000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/PersonalAssets/JellyFish/jellyfish.glb",
+                    "Url" : "castle-data:/generalgame-assets/jellyfish.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5839,7 +5844,7 @@
                       "Y" : 1.0000000000000000E+001,
                       "Z" : -3.7000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/PersonalAssets/JellyFish/jellyfish.glb",
+                    "Url" : "castle-data:/generalgame-assets/jellyfish.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5873,7 +5878,7 @@
                       "Y" : 1.2399999618530273E+001,
                       "Z" : -4.4500000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/PersonalAssets/JellyFish/jellyfish.glb",
+                    "Url" : "castle-data:/generalgame-assets/jellyfish.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5907,7 +5912,7 @@
                       "Y" : 2.0000000000000000E+000,
                       "Z" : -4.1000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/PersonalAssets/JellyFish/jellyfish.glb",
+                    "Url" : "castle-data:/generalgame-assets/jellyfish.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5941,7 +5946,7 @@
                       "Y" : 2.0000000000000000E+000,
                       "Z" : -4.3000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/PersonalAssets/JellyFish/jellyfish.glb",
+                    "Url" : "castle-data:/generalgame-assets/jellyfish.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -5975,7 +5980,7 @@
                       "Y" : 2.4000000000000000E+001,
                       "Z" : -4.0000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/PersonalAssets/JellyFish/jellyfish.glb",
+                    "Url" : "castle-data:/generalgame-assets/jellyfish.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -6009,7 +6014,7 @@
                       "Y" : 2.4000000000000000E+001,
                       "Z" : -3.0000000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/PersonalAssets/JellyFish/jellyfish.glb",
+                    "Url" : "castle-data:/generalgame-assets/jellyfish.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -6049,7 +6054,7 @@
                       "Y" : 5.7000000000000000E+001,
                       "Z" : -3.2500000000000000E+001
                     },
-                    "Url" : "file:///C:/Users/Joshua/Desktop/TinBot.glb",
+                    "Url" : "castle-data:/sandystreedome-assets/SandysTreedome-TinBot.glb",
                     "$Behaviors" : [
                       {
                         "$$ClassName" : "TCastleMeshCollider",
@@ -6107,16 +6112,16 @@
         },
         "RotationPersistent" : {
           "$$ClassName" : "TCastleVector4RotationPersistent",
-          "W" : 1.6001414060592651E+000,
-          "X" : -5.5550861358642578E-001,
-          "Y" : 7.2127741575241089E-001,
-          "Z" : 4.1372603178024292E-001
+          "W" : 8.8937258720397949E-001,
+          "X" : -9.3462496995925903E-001,
+          "Y" : -3.2611346244812012E-001,
+          "Z" : -1.4186693727970123E-001
         },
         "TranslationPersistent" : {
           "$$ClassName" : "TCastleVector3Persistent",
-          "X" : -2.3403251647949219E+001,
-          "Y" : 1.3441781997680664E+001,
-          "Z" : -4.0991531372070312E+001
+          "X" : -6.1392154693603516E+000,
+          "Y" : 8.4207244873046875E+001,
+          "Z" : -8.7724975585937500E+001
         }
       },
       "InternalDesignNavigations[dnFly]" : {
