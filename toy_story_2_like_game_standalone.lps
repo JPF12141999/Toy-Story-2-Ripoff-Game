@@ -19,9 +19,10 @@
         <Filename Value="code\gameinitialize.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="GameInitialize"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="8"/>
-        <CursorPos X="36" Y="36"/>
+        <TopLine Value="64"/>
+        <CursorPos X="17" Y="7"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -35,9 +36,9 @@
       <Unit4>
         <Filename Value="code\gameviewplay.pas"/>
         <UnitName Value="GameViewPlay"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="6" Y="79"/>
+        <TopLine Value="107"/>
+        <CursorPos X="6" Y="32"/>
         <UsageCount Value="10"/>
         <Loaded Value="True"/>
       </Unit4>
