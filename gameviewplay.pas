@@ -71,8 +71,12 @@ begin
 end;
 
 procedure TViewMain.Start;
+var
+  ThirdPersonNav: MyThirdPersonNav;
 begin
   inherited;
+  ThirdPersonNav := MyThirdPersonNav.Create(FreeAtStop);
+  MainViewport.InsertBack(ThirdPersonNav);
 end;
 
 procedure TThirdPersonNav.SetAnimation(const AnimationNames: array of String);
