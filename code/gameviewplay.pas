@@ -23,8 +23,12 @@ type
     MainViewport: TCastleViewport;
     ThirdPersonNavigation: TCastleThirdPersonNavigation;
     SceneLevel: TCastleScene;
+    AvatarTransform: TCastleTransform;
+    SceneLegs: TCastleScene;
   private
     Enemies: TEnemyList;
+    procedure NavigationSetAnimation(const Sender: TCastleThirdPersonNavigation;
+      const AnimationNames: array of String);
   public
     constructor Create(AOwner: TComponent); override;
     procedure Start; override;
@@ -32,15 +36,8 @@ type
     function Press(const Event: TInputPressRelease): Boolean; override;
   end;
 
-  TThirdPersonNav = class(TCastleThirdPersonNavigation)
-  public
-    constructor Create(AOwner: TComponent); override;
-    procedure SetAnimation(const AnimationNames: array of String); override;
-  end;
-
 var
   ViewMain: TViewMain;
-  ThirdPersonNav: TThirdPersonNav;
 
 implementation
 
@@ -54,23 +51,49 @@ begin
   DesignUrl := 'castle-data:/gameviewmain.castle-user-interface';
 end;
 
-constructor TThirdPersonNav.Create(AOwner: TComponent);
-begin
-  inherited;
-end;
-
 procedure TViewMain.Start;
-var
-  ThirdPersonNav: TThirdPersonNav;
 begin
   inherited;
-  ThirdPersonNav := TThirdPersonNav.Create(FreeAtStop);
-  MainViewport.InsertBack(ThirdPersonNav);
+
+  { Critical to make camera orbiting around and movement of avatar
+    to follow proper direction and up.
+    In the AvatarTransform local coordinate system,
+    the avatar is moving in +X, and has up (head) in +Z. }
+  AvatarTransform.Orientation := otUpZDirectionX;
+
+  ThirdPersonNavigation.MouseLook := true;
+  ThirdPersonNavigation.OnAnimation := {$ifdef FPC}@{$endif} NavigationSetAnimation;
+
+  { Configure parameters to move nicely using old simple physics,
+    see examples/third_person_navigation for comments.
+    Use these if you decide to move using "direct" method
+    (when AvatarTransform.ChangeTransform = ctDirect,
+    or when AvatarTransform.ChangeTransform = ctAuto and
+    AvatarTransform has no rigid body and collider). }
+  AvatarTransform.MiddleHeight := 0.9;
+  AvatarTransform.GrowSpeed := 10.0;
+  AvatarTransform.FallSpeed := 10.0;
+  // a bit large, but it is scaled by AvatarTransform scale = 0.1, making it 0.5 effectively
+  AvatarTransform.CollisionSphereRadius := 5;
+
+  ThirdPersonNavigation.Init;
 end;
 
-procedure TThirdPersonNav.SetAnimation(const AnimationNames: array of String);
+procedure TViewMain.NavigationSetAnimation(const Sender: TCastleThirdPersonNavigation;
+  const AnimationNames: array of String);
 begin
+  { Example implementation that merely sets animation on SceneLegs,
+    to either TORSO_IDLE or TORSO_RUN.
 
+    Use castle-model-viewer (formerly view3dscene),
+    https://castle-engine.io/castle-model-viewer,
+    just double-click on MD3 file from CGE editor, to see available animations
+    (in "Animations" panel).
+  }
+  if AnimationNames[0] = 'idle' then
+    SceneLegs.AutoAnimation := 'TORSO_IDLE'
+  else
+    SceneLegs.AutoAnimation := 'TORSO_RUN';
 end;
 
 procedure TViewMain.Update(const SecondsPassed: Single; var HandleInput: Boolean);
