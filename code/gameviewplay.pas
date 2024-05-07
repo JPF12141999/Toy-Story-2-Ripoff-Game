@@ -52,6 +52,8 @@ begin
 end;
 
 procedure TViewMain.Start;
+var
+  DebugAvatar: TDebugTransform;
 begin
   inherited;
 
@@ -73,10 +75,15 @@ begin
   AvatarTransform.MiddleHeight := 0.9;
   AvatarTransform.GrowSpeed := 10.0;
   AvatarTransform.FallSpeed := 10.0;
-  // a bit large, but it is scaled by AvatarTransform scale = 0.1, making it 0.5 effectively
-  AvatarTransform.CollisionSphereRadius := 5;
+  { Note: Expressed in the coordinate system of AvatarTransform *parent*,
+    so the scale of AvatarTransform (like 0.1) doesn't matter. }
+  AvatarTransform.CollisionSphereRadius := 0.8;
 
   ThirdPersonNavigation.Init;
+
+  DebugAvatar := TDebugTransform.Create(FreeAtStop);
+  DebugAvatar.Parent := AvatarTransform;
+  DebugAvatar.Exists := true;
 end;
 
 procedure TViewMain.NavigationSetAnimation(const Sender: TCastleThirdPersonNavigation;
