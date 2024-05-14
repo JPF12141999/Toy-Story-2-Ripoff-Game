@@ -1,3 +1,5 @@
+
+
 { Main view, where most of the application logic takes place.
 
   Feel free to use this code as a starting point for your own projects.
@@ -9,10 +11,10 @@ interface
 
 uses Classes,
   CastleComponentSerialize, CastleUIControls, CastleControls,
-  CastleKeysMouse, CastleViewport, CastleScene, CastleVectors, CastleCameras,
-  CastleTransform, CastleInputs, CastleThirdPersonNavigation, CastleDebugTransform,
-  CastleSceneCore,
-  GameEnemy;
+  CastleKeysMouse, CastleViewport, CastleScene, CastleSoundEngine, CastleVectors,
+  CastleCameras, CastleTransform, CastleInputs, CastleThirdPersonNavigation,
+  CastleDebugTransform, CastleSceneCore, CastleTimeUtils, CastleGLUtils,
+  CastleGLImages, GameEnemy;
 
 type
   { Main view, where most of the application logic takes place. }
@@ -21,19 +23,23 @@ type
     { Components designed using CGE editor.
       These fields will be automatically initialized at Start. }
     MainViewport: TCastleViewport;
+    RunningTimer: TCastleTimer;
     ThirdPersonNavigation: TCastleThirdPersonNavigation;
     SceneLevel: TCastleScene;
-    AvatarTransform: TCastleTransform;
+    SceneAvatar: TCastleScene;
+    AvatarRigidBody: TCastleRigidBody;
     SceneLegs: TCastleScene;
+    SandyJump: TCastleSound;
+    SandyBootstep: TCastleSound;
+    Silence: TCastleSound;
   private
     Enemies: TEnemyList;
-    procedure NavigationSetAnimation(const Sender: TCastleThirdPersonNavigation;
-      const AnimationNames: array of String);
   public
     constructor Create(AOwner: TComponent); override;
     procedure Start; override;
     procedure Update(const SecondsPassed: Single; var HandleInput: Boolean); override;
     function Press(const Event: TInputPressRelease): Boolean; override;
+    function Release(const Event: TInputPressRelease): Boolean; override;
   end;
 
 var
@@ -41,7 +47,10 @@ var
 
 implementation
 
-uses SysUtils;
+uses SysUtils,
+   CastleLoadGltf, CastleRectangles, CastleImages,
+   CastleBoxes, CastleColors, CastleRenderContext, CastleUtils, X3DLoad,
+   GameMyMesh;
 
 { TViewMain ----------------------------------------------------------------- }
 
@@ -52,67 +61,136 @@ begin
 end;
 
 procedure TViewMain.Start;
-var
-  DebugAvatar: TDebugTransform;
 begin
   inherited;
 
-  { Critical to make camera orbiting around and movement of avatar
-    to follow proper direction and up.
-    In the AvatarTransform local coordinate system,
-    the avatar is moving in +X, and has up (head) in +Z. }
-  AvatarTransform.Orientation := otUpZDirectionX;
+  { RunningTimer := TCastleTimer.Create(FreeAtStop);
+   RunningTimer.IntervalSeconds := 1;
+  RunningTimer.OnTimer := {$ifdef FPC}@{$endif} nil;
+  InsertFront(RunningTimer); }
 
-  ThirdPersonNavigation.MouseLook := true;
-  ThirdPersonNavigation.OnAnimation := {$ifdef FPC}@{$endif} NavigationSetAnimation;
+   { Configure some parameters of old simple physics,
+    these only matter when SceneAvatar.Gravity = true.
+    Don't use these deprecated things if you don't plan to use ChangeTransformation = ctDirect! }
+  SceneAvatar.GrowSpeed := 10.0;
+  SceneAvatar.FallSpeed := 10.0;
+  { When avatar collides as sphere it can climb stairs,
+    because legs can temporarily collide with objects. }
+  SceneAvatar.CollisionSphereRadius := 0.5;
 
-  { Configure parameters to move nicely using old simple physics,
-    see examples/third_person_navigation for comments.
-    Use these if you decide to move using "direct" method
-    (when AvatarTransform.ChangeTransform = ctDirect,
-    or when AvatarTransform.ChangeTransform = ctAuto and
-    AvatarTransform has no rigid body and collider). }
-  AvatarTransform.MiddleHeight := 0.9;
-  AvatarTransform.GrowSpeed := 10.0;
-  AvatarTransform.FallSpeed := 10.0;
-  { Note: Expressed in the coordinate system of AvatarTransform *parent*,
-    so the scale of AvatarTransform (like 0.1) doesn't matter. }
-  AvatarTransform.CollisionSphereRadius := 0.8;
-
+  { Configure ThirdPersonNavigation keys (for now, we don't expose doing this in CGE editor). }
+  ThirdPersonNavigation.Input_LeftStrafe.Assign(keyQ);
+  ThirdPersonNavigation.Input_RightStrafe.Assign(keyE);
+  ThirdPersonNavigation.MouseLook := true; // TODO: assigning it from editor doesn't make mouse hidden in mouse look
   ThirdPersonNavigation.Init;
-
-  DebugAvatar := TDebugTransform.Create(FreeAtStop);
-  DebugAvatar.Parent := AvatarTransform;
-  DebugAvatar.Exists := true;
-end;
-
-procedure TViewMain.NavigationSetAnimation(const Sender: TCastleThirdPersonNavigation;
-  const AnimationNames: array of String);
-begin
-  { Example implementation that merely sets animation on SceneLegs,
-    to either TORSO_IDLE or TORSO_RUN.
-
-    Use castle-model-viewer (formerly view3dscene),
-    https://castle-engine.io/castle-model-viewer,
-    just double-click on MD3 file from CGE editor, to see available animations
-    (in "Animations" panel).
-  }
-  if AnimationNames[0] = 'idle' then
-    SceneLegs.AutoAnimation := 'TORSO_IDLE'
-  else
-    SceneLegs.AutoAnimation := 'TORSO_RUN';
 end;
 
 procedure TViewMain.Update(const SecondsPassed: Single; var HandleInput: Boolean);
 begin
   inherited;
-  { This virtual method is executed every frame (many times per second). }
 end;
 
 function TViewMain.Press(const Event: TInputPressRelease): Boolean;
+
+function AvatarRayCast: TCastleTransform;
+  var
+    RayCastResult: TPhysicsRayCastResult;
+  begin
+    RayCastResult := AvatarRigidBody.PhysicsRayCast(
+      SceneAvatar.Middle,
+      SceneAvatar.Direction
+    );
+    Result := RayCastResult.Transform;
+
+    { Alternative version, using Items.PhysicsRayCast
+      (everything in world space coordinates).
+      This works equally well, showing it here just for reference.
+
+    RayCastResult := MainViewport.Items.PhysicsRayCast(
+      SceneAvatar.Parent.LocalToWorld(SceneAvatar.Middle),
+      SceneAvatar.Parent.LocalToWorldDirection(SceneAvatar.Direction),
+      MaxSingle,
+      AvatarRigidBody
+    );
+    Result := RayCastResult.Transform;
+    }
+
+    (* Alternative versions, using old physics,
+       see https://castle-engine.io/physics#_old_system_for_collisions_and_gravity .
+       They still work (even when you also use new physics).
+
+    if not AvatarRigidBody.Exists then
+    begin
+      { SceneAvatar.RayCast tests a ray collision,
+        ignoring the collisions with SceneAvatar itself (so we don't detect our own
+        geometry as colliding). }
+      Result := SceneAvatar.RayCast(SceneAvatar.Middle, SceneAvatar.Direction);
+    end else
+    begin
+      { When physics engine is working, we should not toggle Exists multiple
+        times in a single frame, which makes the curent TCastleTransform.RayCast not good.
+        So use Items.WorldRayCast, and secure from "hitting yourself" by just moving
+        the initial ray point by 0.5 units. }
+      Result := MainViewport.Items.WorldRayCast(
+        SceneAvatar.Middle + SceneAvatar.Direction * 0.5, SceneAvatar.Direction);
+    end;
+    *)
+  end;
+
 begin
   Result := inherited;
   if Result then Exit; // allow the ancestor to handle keys
+
+  // Use this to handle keys:
+  {
+  if Event.IsKey(keyXxx) then
+  begin
+    // DoSomething;
+    Exit(true); // key was handled
+  end;
+  }
+
+end;
+
+function TViewMain.Release(const Event: TInputPressRelease): Boolean;
+
+begin
+  Result := inherited;
+  if Result then Exit; // allow the ancestor to handle keys
+
+      { Alternative version, using Items.PhysicsRayCast
+        (everything in world space coordinates).
+        This works equally well, showing it here just for reference.
+
+      RayCastResult := MainViewport.Items.PhysicsRayCast(
+        SceneAvatar.Parent.LocalToWorld(SceneAvatar.Middle),
+        SceneAvatar.Parent.LocalToWorldDirection(SceneAvatar.Direction),
+        MaxSingle,
+        AvatarRigidBody
+      );
+      Result := RayCastResult.Transform;
+      }
+
+      (* Alternative versions, using old physics,
+         see https://castle-engine.io/physics#_old_system_for_collisions_and_gravity .
+         They still work (even when you also use new physics).
+
+      if not AvatarRigidBody.Exists then
+      begin
+        { SceneAvatar.RayCast tests a ray collision,
+          ignoring the collisions with SceneAvatar itself (so we don't detect our own
+          geometry as colliding). }
+        Result := SceneAvatar.RayCast(SceneAvatar.Middle, SceneAvatar.Direction);
+      end else
+      begin
+        { When physics engine is working, we should not toggle Exists multiple
+          times in a single frame, which makes the curent TCastleTransform.RayCast not good.
+          So use Items.WorldRayCast, and secure from "hitting yourself" by just moving
+          the initial ray point by 0.5 units. }
+        Result := MainViewport.Items.WorldRayCast(
+          SceneAvatar.Middle + SceneAvatar.Direction * 0.5, SceneAvatar.Direction);
+      end;
+      *)
 
   { This virtual method is executed when user presses
     a key, a mouse button, or touches a touch-screen.
@@ -132,6 +210,7 @@ begin
     Exit(true); // key was handled
   end;
   }
+
 end;
 
 end.
