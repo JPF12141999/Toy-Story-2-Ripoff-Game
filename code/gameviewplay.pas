@@ -310,7 +310,7 @@ begin
     TODO: maybe we can remove this logic after using TCastleCapsule collider for player. }
   if not PlayerOnGround then
   begin
-    GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(-SceneAvatar.BoundingBox.SizeX * 0.30, -SceneAvatar.BoundingBox.SizeY / 2, 0), Vector3(0, -1, 0));
+    GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(-SceneAvatar.BoundingBox.SizeX * 0.30, -SceneAvatar.BoundingBox.SizeY / 2, -SceneAvatar.BoundingBox.SizeZ / 2), Vector3(0, -1, 0));
     if GroundHit.Hit then
     begin
       // WriteLnLog('Distance ', FloatToStr(Distance));
