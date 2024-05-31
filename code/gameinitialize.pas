@@ -12,7 +12,10 @@ interface
 implementation
 
 uses SysUtils,
-  CastleWindow, CastleLog, CastleUIControls, CastleGLUtils, CastleParameters,
+  CastleApplicationProperties, CastleColors, CastleConfig, CastleControls,
+  CastleImages, CastleFilesUtils, CastleKeysMouse, CastleLog, CastleScene,
+  CastleSceneCore, CastleSoundEngine, CastleUIControls,
+  CastleVectors, CastleWindow,
   GameViewPlay
   {$region 'Castle Initialization Uses'}
   // The content here may be automatically updated by CGE editor.
@@ -30,7 +33,7 @@ begin
   { Create views (see https://castle-engine.io/views ). }
   {$region 'Castle View Creation'}
   // The content here may be automatically updated by CGE editor.
-  ViewMain := TViewMain.Create(Application);
+  ViewMain := TViewPlay.Create(Application);
   {$endregion 'Castle View Creation'}
 
   Window.Container.View := ViewMain;

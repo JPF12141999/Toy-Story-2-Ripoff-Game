@@ -24,7 +24,8 @@
             "$$ClassName" : "TCastleSound",
             "Name" : "BackgroundMusic",
             "Stream" : true,
-            "Url" : "castle-data:/toystorymusic/Tomfoolery.ogg"
+            "Url" : "castle-data:/toystorymusic/Tomfoolery.ogg",
+            "Volume" : 0.0000000000000000E+000
           }
         ],
         "$Children" : [
@@ -337,8 +338,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -379,8 +382,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -401,8 +406,7 @@
                     "Name" : "Nail_Billboard5"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Basement_Nail5",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider101"
                   },
                   {
@@ -422,8 +426,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -465,8 +471,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -487,8 +495,7 @@
                     "Name" : "Nail_Billboard2"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Basement_Nail2",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider103"
                   },
                   {
@@ -508,8 +515,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -530,8 +539,7 @@
                     "Name" : "Nail_Billboard3"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Basement_Nail3",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider104"
                   },
                   {
@@ -551,8 +559,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -573,8 +583,7 @@
                     "Name" : "Nail_Billboard7"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Basement_Nail7",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider105"
                   },
                   {
@@ -594,8 +603,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -616,8 +627,7 @@
                     "Name" : "Nail_Billboard4"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Basement_Nail4",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider106"
                   },
                   {
@@ -637,8 +647,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -659,8 +671,7 @@
                     "Name" : "Nail_Billboard8"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Attic_Nail1",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider107"
                   },
                   {
@@ -680,8 +691,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -702,8 +715,7 @@
                     "Name" : "Nail_Billboard9"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Attic_Nail2",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider108"
                   },
                   {
@@ -723,8 +735,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -745,8 +759,7 @@
                     "Name" : "Nail_Billboard10"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Attic_Nail3",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider109"
                   },
                   {
@@ -766,8 +779,10 @@
                 },
                 "RotationPersistent" : {
                   "$$ClassName" : "TCastleVector4RotationPersistent",
-                  "W" : 6.8997222185134888E-001,
-                  "Y" : 1.0000001192092896E+000
+                  "W" : 4.9438995122909546E-001,
+                  "X" : -1.7263337213080376E-004,
+                  "Y" : 9.9999958276748657E-001,
+                  "Z" : -6.8408675724640489E-004
                 },
                 "ScalePersistent" : {
                   "$$ClassName" : "TCastleVector3Persistent",
@@ -788,8 +803,7 @@
                     "Name" : "Nail_Billboard11"
                   },
                   {
-                    "$$ClassName" : "TCastleMeshCollider",
-                    "Mesh" : "Attic_Nail4",
+                    "$$ClassName" : "TCastleBoxCollider",
                     "Name" : "MeshCollider110"
                   },
                   {
@@ -6123,6 +6137,7 @@
           },
           {
             "$$ClassName" : "TCastleScene",
+            "AutoAnimation" : "idle",
             "DefaultAnimationTransition" : 1.0000000149011612E-001,
             "ExposeTransforms" : [
             ],
@@ -6139,16 +6154,16 @@
             },
             "ScalePersistent" : {
               "$$ClassName" : "TCastleVector3Persistent",
-              "X" : 5.0000000745058060E-002,
-              "Y" : 5.0000000745058060E-002,
-              "Z" : 5.0000000745058060E-002
+              "X" : 6.9999998807907104E-001,
+              "Y" : 6.9999998807907104E-001,
+              "Z" : 6.9999998807907104E-001
             },
             "TranslationPersistent" : {
               "$$ClassName" : "TCastleVector3Persistent",
               "Y" : 4.4118273258209229E-001,
               "Z" : 1.2154106140136719E+002
             },
-            "Url" : "castle-data:/generalgame-assets/SandyCheeks.glb",
+            "Url" : "castle-data:/generalgame-assets/SandyCheeks.gltf",
             "$Behaviors" : [
               {
                 "$$ClassName" : "TCastleCapsuleCollider",
@@ -6197,11 +6212,9 @@
         {
           "$$ClassName" : "TCastleThirdPersonNavigation",
           "AnimationFall" : "jump",
-          "AnimationIdle" : "stand",
-          "AnimationJump" : "stand",
-          "AnimationRotate" : "stand",
-          "AnimationRun" : "walk",
+          "AnimationWalk" : "run",
           "Avatar" : "SceneAvatar",
+          "JumpSpeed" : 7.0000000000000000E+000,
           "MoveSpeed" : 1.0000000000000000E+001,
           "Name" : "ThirdPersonNavigation"
         },
@@ -6224,16 +6237,20 @@
         },
         "RotationPersistent" : {
           "$$ClassName" : "TCastleVector4RotationPersistent",
-          "W" : 6.9013148546218872E-001,
-          "X" : 2.6480499655008316E-002,
-          "Y" : 9.9963974952697754E-001,
-          "Z" : 4.4018034823238850E-003
+          "W" : 1.4477608203887939E+000,
+          "X" : -9.2697495222091675E-001,
+          "Y" : 2.8938743472099304E-001,
+          "Z" : 2.3868884146213531E-001
+        },
+        "ScalePersistent" : {
+          "$$ClassName" : "TCastleVector3Persistent",
+          "Y" : 1.0000001192092896E+000
         },
         "TranslationPersistent" : {
           "$$ClassName" : "TCastleVector3Persistent",
-          "X" : 1.8733657836914062E+002,
-          "Y" : 6.5453071594238281E+001,
-          "Z" : 2.8759478759765625E+002
+          "X" : 2.7268674373626709E+000,
+          "Y" : 4.8730764389038086E+000,
+          "Z" : 1.2294940185546875E+002
         }
       },
       "InternalDesignNavigations[dnFly]" : {

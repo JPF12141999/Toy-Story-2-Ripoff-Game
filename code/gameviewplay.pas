@@ -11,14 +11,13 @@ interface
 
 uses Classes,
   CastleComponentSerialize, CastleUIControls, CastleControls,
-  CastleKeysMouse, CastleViewport, CastleScene, CastleSoundEngine, CastleVectors,
-  CastleCameras, CastleTransform, CastleInputs, CastleThirdPersonNavigation,
-  CastleDebugTransform, CastleSceneCore, CastleTimeUtils, CastleGLUtils,
-  CastleGLImages, GameEnemy;
+  CastleKeysMouse, CastleViewport, CastleScene, CastleSceneCore, CastleVectors,
+  CastleTransform, CastleSoundEngine, X3DNodes, CastleThirdPersonNavigation,
+  GameEnemy;
 
 type
   { Main view, where most of the application logic takes place. }
-  TViewMain = class(TCastleView)
+  TViewPlay = class(TCastleView)
   published
     { Components designed using CGE editor.
       These fields will be automatically initialized at Start. }
@@ -34,33 +33,57 @@ type
     Silence: TCastleSound;
   private
     Enemies: TEnemyList;
+  strict private
+  WasInputJump: Boolean;
+
+  procedure ConfigurePlayerPhysics(const Player:TCastleScene);
+  procedure PlayerCollisionEnter(const CollisionDetails: TPhysicsCollisionDetails);
+
+  procedure UpdatePlayerByVelocityAndRay(const SecondsPassed: Single;
+  var HandleInput: Boolean);
+
   public
     constructor Create(AOwner: TComponent); override;
     procedure Start; override;
     procedure Update(const SecondsPassed: Single; var HandleInput: Boolean); override;
     function Press(const Event: TInputPressRelease): Boolean; override;
     function Release(const Event: TInputPressRelease): Boolean; override;
+
+    function IsPlayerDead: Boolean;
+
   end;
 
 var
-  ViewMain: TViewMain;
+  ViewMain: TViewPlay;
 
 implementation
 
 uses SysUtils,
-   CastleLoadGltf, CastleRectangles, CastleImages,
+   CastleLoadGltf, CastleRectangles, CastleImages, Math,
    CastleBoxes, CastleColors, CastleRenderContext, CastleUtils, X3DLoad,
    GameMyMesh;
 
 { TViewMain ----------------------------------------------------------------- }
 
-constructor TViewMain.Create(AOwner: TComponent);
+constructor TViewPlay.Create(AOwner: TComponent);
 begin
   inherited;
   DesignUrl := 'castle-data:/gameviewmain.castle-user-interface';
 end;
 
-procedure TViewMain.Start;
+procedure TViewPlay.ConfigurePlayerPhysics(
+  const Player: TCastleScene);
+var
+  RBody: TCastleRigidBody;
+begin
+  RBody := Player.FindBehavior(TCastleRigidBody) as TCastleRigidBody;
+  if RBody<> nil then
+  begin
+    RBody.OnCollisionEnter := {$ifdef FPC}@{$endif}PlayerCollisionEnter;
+  end;
+end;
+
+procedure TViewPlay.Start;
 begin
   inherited;
 
@@ -83,14 +106,16 @@ begin
   ThirdPersonNavigation.Input_RightStrafe.Assign(keyE);
   ThirdPersonNavigation.MouseLook := true; // TODO: assigning it from editor doesn't make mouse hidden in mouse look
   ThirdPersonNavigation.Init;
+
+  ConfigurePlayerPhysics(SceneAvatar);
 end;
 
-procedure TViewMain.Update(const SecondsPassed: Single; var HandleInput: Boolean);
+procedure TViewPlay.Update(const SecondsPassed: Single; var HandleInput: Boolean);
 begin
   inherited;
 end;
 
-function TViewMain.Press(const Event: TInputPressRelease): Boolean;
+function TViewPlay.Press(const Event: TInputPressRelease): Boolean;
 
 function AvatarRayCast: TCastleTransform;
   var
@@ -152,7 +177,7 @@ begin
 
 end;
 
-function TViewMain.Release(const Event: TInputPressRelease): Boolean;
+function TViewPlay.Release(const Event: TInputPressRelease): Boolean;
 
 begin
   Result := inherited;
@@ -212,5 +237,82 @@ begin
   }
 
 end;
+
+procedure TViewPlay.PlayerCollisionEnter(
+  const CollisionDetails: TPhysicsCollisionDetails);
+begin
+  if CollisionDetails.OtherTransform <> nil then
+  begin
+    if Pos('Coin', CollisionDetails.OtherTransform.Name) > 0 then
+    begin
+      CollisionDetails.OtherTransform.Exists := false;
+    end else
+    if Pos('Helmet', CollisionDetails.OtherTransform.Name) > 0 then
+    begin
+      CollisionDetails.OtherTransform.Exists := false;
+    end else
+    if Pos('Patty', CollisionDetails.OtherTransform.Name) > 0 then
+    begin
+      CollisionDetails.OtherTransform.Exists := false;
+    end else
+    if Pos('Token', CollisionDetails.OtherTransform.Name) > 0 then
+    begin
+      CollisionDetails.OtherTransform.Exists := false;
+    end else
+    if Pos('Paper', CollisionDetails.OtherTransform.Name) > 0 then
+    begin
+        CollisionDetails.OtherTransform.Exists := false;
+    end;
+  end;
+end;
+
+procedure TViewPlay.UpdatePlayerByVelocityAndRay(const SecondsPassed: Single;
+  var HandleInput: Boolean);
+const
+  JumpVelocity = 700;
+  MaxHorizontalVelocity = 350;
+var
+  PlayerOnGround: Boolean;
+  GroundHit: TPhysicsRayCastResult;
+begin
+  { This method is executed every frame.}
+
+  { When player is dead, he can't do anything }
+  if IsPlayerDead then
+    Exit;
+
+  { Check player is on ground }
+  GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(0, -SceneAvatar.BoundingBox.SizeY / 2, 0), Vector3(0, -1, 0));
+  if GroundHit.Hit then
+  begin
+    // WriteLnLog('Distance ', FloatToStr(Distance));
+    PlayerOnGround := GroundHit.Distance < 2;
+  end else
+    PlayerOnGround := false;
+
+  { Two more checks using physics engine - player should slide down when player is just
+    on the edge.
+    TODO: maybe we can remove this logic after using TCastleCapsule collider for player. }
+  if not PlayerOnGround then
+  begin
+    GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(-SceneAvatar.BoundingBox.SizeX * 0.30, -SceneAvatar.BoundingBox.SizeY / 2, 0), Vector3(0, -1, 0));
+    if GroundHit.Hit then
+    begin
+      // WriteLnLog('Distance ', FloatToStr(Distance));
+      PlayerOnGround := GroundHit.Distance < 2;
+    end else
+      PlayerOnGround := false;
+  end;
+
+  if not PlayerOnGround then
+  begin
+    GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(SceneAvatar.BoundingBox.SizeX * 0.30, -SceneAvatar.BoundingBox.SizeY / 2, 0), Vector3(0, -1, 0));
+    if GroundHit.Hit then
+    begin
+      // WriteLnLog('Distance ', FloatToStr(Distance));
+      PlayerOnGround := GroundHit.Distance < 2;
+    end else
+      PlayerOnGround := false;
+  end;
 
 end.
