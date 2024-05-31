@@ -6164,6 +6164,13 @@
               "Z" : 1.2154106140136719E+002
             },
             "Url" : "castle-data:/generalgame-assets/SandyCheeks.gltf",
+            "$NonVisualComponents" : [
+              {
+                "$$ClassName" : "TCastleSound",
+                "Name" : "SandyJump",
+                "Url" : "castle-data:/toystory-ingamesounds-sandy/sandyjump.wav"
+              }
+            ],
             "$Behaviors" : [
               {
                 "$$ClassName" : "TCastleCapsuleCollider",

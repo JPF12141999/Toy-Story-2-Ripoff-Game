@@ -35,6 +35,7 @@ type
     Enemies: TEnemyList;
   strict private
   WasInputJump: Boolean;
+  IsPlayerDead: Boolean;
 
   procedure ConfigurePlayerPhysics(const Player:TCastleScene);
   procedure PlayerCollisionEnter(const CollisionDetails: TPhysicsCollisionDetails);
@@ -42,14 +43,14 @@ type
   procedure UpdatePlayerByVelocityAndRay(const SecondsPassed: Single;
   var HandleInput: Boolean);
 
+  function InputJump: Boolean;
+
   public
     constructor Create(AOwner: TComponent); override;
     procedure Start; override;
     procedure Update(const SecondsPassed: Single; var HandleInput: Boolean); override;
     function Press(const Event: TInputPressRelease): Boolean; override;
     function Release(const Event: TInputPressRelease): Boolean; override;
-
-    function IsPlayerDead: Boolean;
 
   end;
 
@@ -69,6 +70,20 @@ constructor TViewPlay.Create(AOwner: TComponent);
 begin
   inherited;
   DesignUrl := 'castle-data:/gameviewmain.castle-user-interface';
+end;
+
+function TViewPlay.InputJump: Boolean;
+var
+  I: Integer;
+begin
+  Result :=
+    Container.Pressed.Items[keySpace];
+
+  { Mouse, or any finger, pressing in upper part of the screen. }
+  if buttonLeft in Container.MousePressed then
+    for I := 0 to Container.TouchesCount - 1 do
+      if (Container.Touches[I].Position.Y >= Container.PixelsHeight * 0.5) then
+        Exit(true);
 end;
 
 procedure TViewPlay.ConfigurePlayerPhysics(
@@ -304,15 +319,16 @@ begin
       PlayerOnGround := false;
   end;
 
-  if not PlayerOnGround then
+  if InputJump then
   begin
-    GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(SceneAvatar.BoundingBox.SizeX * 0.30, -SceneAvatar.BoundingBox.SizeY / 2, 0), Vector3(0, -1, 0));
-    if GroundHit.Hit then
+    if (not WasInputJump) and PlayerOnGround then
     begin
-      // WriteLnLog('Distance ', FloatToStr(Distance));
-      PlayerOnGround := GroundHit.Distance < 2;
-    end else
-      PlayerOnGround := false;
-  end;
+      SoundEngine.Play(SandyJump);
+      WasInputJump := true;
+    end;
+  end else
+    WasInputJump := false;
+
+end;
 
 end.
