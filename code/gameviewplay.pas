@@ -297,7 +297,7 @@ begin
     Exit;
 
   { Check player is on ground }
-  GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(0, -SceneAvatar.BoundingBox.SizeY / 2, 0), Vector3(0, -1, 0));
+  GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(0, -SceneAvatar.BoundingBox.SizeY / 2, -SceneAvatar.BoundingBox.SizeZ / 2), Vector3(0, -1, 0));
   if GroundHit.Hit then
   begin
     // WriteLnLog('Distance ', FloatToStr(Distance));
