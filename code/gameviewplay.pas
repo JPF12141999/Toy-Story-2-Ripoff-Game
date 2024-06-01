@@ -27,9 +27,18 @@ type
     SceneLevel: TCastleScene;
     SceneAvatar: TCastleScene;
     AvatarRigidBody: TCastleRigidBody;
+    Face: TCastleImageControl;
+    PapersCollected: TCastleImageControl;
+    Lives: TCastleImageControl;
+    Background: TCastleImageControl;
+    HealthPercent: TCastleImageControl;
+    KarateAttack: TCastleImageControl;
+    LaserAttack: TCastleImageControl;
+    CoinsCollected: TCastleImageControl;
     SceneLegs: TCastleScene;
-    SandyJump: TCastleSound;
-    SandyBootstep: TCastleSound;
+    SoundJump: TCastleSound;
+    SoundPowerup: TCastleSound;
+    SoundOwie: TCastleSound;
     Silence: TCastleSound;
   private
     Enemies: TEnemyList;
@@ -61,8 +70,7 @@ implementation
 
 uses SysUtils,
    CastleLoadGltf, CastleRectangles, CastleImages, Math,
-   CastleBoxes, CastleColors, CastleRenderContext, CastleUtils, X3DLoad,
-   GameMyMesh;
+   CastleBoxes, CastleColors, CastleRenderContext, CastleUtils, X3DLoad;
 
 { TViewMain ----------------------------------------------------------------- }
 
@@ -123,6 +131,15 @@ begin
   ThirdPersonNavigation.Init;
 
   ConfigurePlayerPhysics(SceneAvatar);
+
+  Face.Translation := Vector2(1160, 900);
+  PapersCollected.Translation := Vector2(610, 900);
+  Lives.Translation := Vector2(-10, 900);
+  Background.Translation := Vector2(1100, 900);
+  HealthPercent.Translation := Vector2(1100, 900);
+  CoinsCollected.Translation := Vector2(20, -300);
+  KarateAttack.Translation := Vector2(1260, -300);
+  LaserAttack.Translation := Vector2(890, -300);
 end;
 
 procedure TViewPlay.Update(const SecondsPassed: Single; var HandleInput: Boolean);
@@ -261,22 +278,35 @@ begin
     if Pos('Coin', CollisionDetails.OtherTransform.Name) > 0 then
     begin
       CollisionDetails.OtherTransform.Exists := false;
+      SoundEngine.Play(SoundPowerup);
     end else
     if Pos('Helmet', CollisionDetails.OtherTransform.Name) > 0 then
     begin
       CollisionDetails.OtherTransform.Exists := false;
+      SoundEngine.Play(SoundPowerup);
     end else
     if Pos('Patty', CollisionDetails.OtherTransform.Name) > 0 then
     begin
       CollisionDetails.OtherTransform.Exists := false;
+      SoundEngine.Play(SoundPowerup);
     end else
     if Pos('Token', CollisionDetails.OtherTransform.Name) > 0 then
     begin
       CollisionDetails.OtherTransform.Exists := false;
+      SoundEngine.Play(SoundPowerup);
     end else
     if Pos('Paper', CollisionDetails.OtherTransform.Name) > 0 then
     begin
         CollisionDetails.OtherTransform.Exists := false;
+        SoundEngine.Play(SoundPowerup);
+    end else
+     if Pos('SeaUrchin', CollisionDetails.OtherTransform.Name) > 0 then
+    begin
+        SoundEngine.Play(SoundOwie);
+    end else
+     if Pos('Jellyfish', CollisionDetails.OtherTransform.Name) > 0 then
+    begin
+      SoundEngine.Play(SoundOwie);
     end;
   end;
 end;
@@ -297,7 +327,7 @@ begin
     Exit;
 
   { Check player is on ground }
-  GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(0, -SceneAvatar.BoundingBox.SizeY / 2, -SceneAvatar.BoundingBox.SizeZ / 2), Vector3(0, -1, 0));
+  GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(0, -SceneAvatar.BoundingBox.SizeY / 2, 0), Vector3(0, -1, 0));
   if GroundHit.Hit then
   begin
     // WriteLnLog('Distance ', FloatToStr(Distance));
@@ -310,7 +340,7 @@ begin
     TODO: maybe we can remove this logic after using TCastleCapsule collider for player. }
   if not PlayerOnGround then
   begin
-    GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(-SceneAvatar.BoundingBox.SizeX * 0.30, -SceneAvatar.BoundingBox.SizeY / 2, -SceneAvatar.BoundingBox.SizeZ / 2), Vector3(0, -1, 0));
+    GroundHit := AvatarRigidBody.PhysicsRayCast(SceneAvatar.Translation + Vector3(-SceneAvatar.BoundingBox.SizeX * 0.30 , -SceneAvatar.BoundingBox.SizeY / 2 , -SceneAvatar.BoundingBox.SizeZ * 0.30), Vector3(0, -1, 0));
     if GroundHit.Hit then
     begin
       // WriteLnLog('Distance ', FloatToStr(Distance));
@@ -323,7 +353,7 @@ begin
   begin
     if (not WasInputJump) and PlayerOnGround then
     begin
-      SoundEngine.Play(SandyJump);
+      SoundEngine.Play(SoundJump);
       WasInputJump := true;
     end;
   end else
