@@ -22,103 +22,124 @@ unit GameEnemy;
 interface
 
 uses Classes, Generics.Collections,
-  CastleVectors, CastleScene, CastleTransform;
-
+  CastleVectors, CastleScene, CastleTransform, CastleSoundEngine;
 type
-  { Simple enemy intelligence.
-    It controls the parent Scene (TCastleScene): moves it, runs animations of it etc.
-
-    This is a TCastleBehavior descendant,
-    and is inserted to parent like EnemyScene.AddBehavior(...).
-    You can get the TEnemy instance of a TCastleScene,
-    by taking "Scene.FindBehavior(TEnemy)".
-
-    Other ways of making an association TCastleScene <-> TEnemy logic are possible:
-
-    - TEnemy could be an independent class (not connected to any CGE class),
-      and simply have a reference to CGE TCastleScene instance.
-
-      This makes it easy to map TEnemy->TCastleScene.
-      To map TCastleScene->TEnemy you could e.g. use TCastleScene.Tag,
-      or a dedicated map structure like TDictionary from Generics.Collections.
-
-    - You could also make TEnemy a descendant of TCastleScene.
-
-    Note that TCastleBehavior or TCastleTransform descendants could be
-    registered in the CGE editor to visually add and edit them from editor.
-    See https://castle-engine.io/manual_editor.php#section_custom_components .
-    In this unit we call RegisterSerializableComponent,
-    so you only need to add editor_units="GameEnemy" to CastleEngineManifest.xml to see it in action.
-  }
   TEnemy = class(TCastleBehavior)
   strict private
     Scene: TCastleScene;
+    RBody: TCastleRigidBody;
     MoveDirection: Integer; //< Always 1 or -1
     Dead: Boolean;
+    DontFallDown: Boolean;
   public
     constructor Create(AOwner: TComponent); override;
     procedure ParentAfterAttach; override;
     procedure Update(const SecondsPassed: Single; var RemoveMe: TRemoveType); override;
-    procedure Hurt;
+    procedure HitPlayer;
+
+    procedure CollisionEnter(const CollisionDetails: TPhysicsCollisionDetails);
   end;
 
   TEnemyList = {$ifdef FPC}specialize{$endif} TObjectList<TEnemy>;
 
 implementation
 
-uses CastleComponentSerialize;
+uses
+  CastleLog,
+  GameViewPlay;
+
+{ TEnemy --------------------------------------------------------------------- }
 
 constructor TEnemy.Create(AOwner: TComponent);
 begin
-  inherited;
+  inherited Create(AOwner);
   MoveDirection := -1;
+  DontFallDown := true;
 end;
 
 procedure TEnemy.ParentAfterAttach;
 begin
   inherited;
+
   Scene := Parent as TCastleScene; // TEnemy can only be added as behavior to TCastleScene
+  RBody := Scene.FindBehavior(TCastleRigidBody) as TCastleRigidBody;
+  if RBody <> nil then
+    RBody.OnCollisionEnter := {$ifdef FPC}@{$endif}CollisionEnter;
+  { In editor you can change scale to -1 1 1 to change enemy inital direction }
+  if Scene.Scale.X < 0 then
+    MoveDirection := 1;
 end;
 
 procedure TEnemy.Update(const SecondsPassed: Single; var RemoveMe: TRemoveType);
 const
-  MovingSpeed = 2;
+  MovingSpeed = 200;
+var
+  EnemyOnGround: Boolean;
+  NeedTurn: Boolean;
+  Vel: TVector3;
+  RayMaxDistance: Single;
+  ObstacleAhead: TCastleTransform;
 begin
   inherited;
 
-  if Dead then Exit;
+  if RBody = nil then
+    Exit;
 
-  // We modify the Z coordinate, responsible for enemy going forward
-  Scene.Translation := Scene.Translation +
-    Vector3(0, 0, MoveDirection * SecondsPassed * MovingSpeed);
+  RayMaxDistance := Scene.BoundingBox.SizeY * 0.50 + 5;
+  EnemyOnGround := RBody.PhysicsRayCast(Scene.Translation,
+    Vector3(0, -1, 0), RayMaxDistance).Hit;
 
-  Scene.Direction := Vector3(0, 0, MoveDirection);
+  if DontFallDown then
+  begin
+    NeedTurn := not RBody.PhysicsRayCast(Scene.Translation
+      + Vector3(MoveDirection * Scene.BoundingBox.SizeX * 0.50, 0, 0),
+      Vector3(0, -1, 0), RayMaxDistance).Hit;
+  end else
+    NeedTurn := false;
 
-  // Toggle MoveDirection between 1 and -1
-  if Scene.Translation.Z > 5 then
-    MoveDirection := -1
-  else
-  if Scene.Translation.Z < -5 then
-    MoveDirection := 1;
+  { Check enemy must turn because he go wall. }
+  if not NeedTurn then
+  begin
+    ObstacleAhead := RBody.PhysicsRayCast(Scene.Translation,
+      Vector3(MoveDirection, 0, 0), RayMaxDistance + 5).Transform;
+
+    if ObstacleAhead <> nil then
+    begin
+      { Enemy should not run away from the player or change direction when
+        there is coin }
+      if (ObstacleAhead.Name <> 'ScenePlayer') and
+         (Pos('Coin', ObstacleAhead.Name) = 0) and
+         (Pos('SeaUrchin', ObstacleAhead.Name) = 0) and
+         (Pos('Jellyfish', ObstacleAhead.Name) = 0) then
+        NeedTurn := true;
+    end;
+  end;
+
+  if NeedTurn then
+    MoveDirection := - MoveDirection;
+
+  Vel := RBody.LinearVelocity;
+
+  Vel.X := MoveDirection * MovingSpeed;
+
+  Scene.Scale := Vector3(-MoveDirection, 1, 1);
+
+  RBody.LinearVelocity := Vel;
 end;
 
-procedure TEnemy.Hurt;
-var
-  RBody: TCastleRigidBody;
+procedure TEnemy.HitPlayer;
 begin
-
-  // dead corpse no longer collides
-  // old physics:
-  Scene.Pickable := false;
-  Scene.Collides := false;
-  // new physics:
-  RBody := Scene.FindBehavior(TCastleRigidBody) as TCastleRigidBody;
-  if RBody <> nil then
-    RBody.Exists := false;
-
   Dead := true;
+  RBody.Exists := false;
 end;
 
-initialization
-  RegisterSerializableComponent(TEnemy, 'Enemy');
+procedure TEnemy.CollisionEnter(const CollisionDetails: TPhysicsCollisionDetails);
+begin
+  if Dead then
+    Exit;
+
+  if CollisionDetails.OtherTransform.Name = 'SceneAvatar' then
+    HitPlayer
+end;
+
 end.
